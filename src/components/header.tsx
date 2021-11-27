@@ -1,11 +1,16 @@
 import * as React from "react"
+import { FC } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
+interface HeaderProps {
+  siteTitle: string | null | undefined;
+}
+
+const Header: FC<HeaderProps> = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#100B24`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -16,7 +21,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <p style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,7 +31,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </p>
     </div>
   </header>
 )

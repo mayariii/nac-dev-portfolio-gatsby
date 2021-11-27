@@ -3,8 +3,13 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { FC } from "react"
 
-const UsingSSR = ({ serverData }) => {
+interface UsingSSRProps {
+  serverData: any
+}
+
+const UsingSSR: FC<UsingSSRProps> = ({ serverData }) => {
   return (
     <Layout>
       <Seo title="Using SSR" />
